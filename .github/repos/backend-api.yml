@@ -1,0 +1,20 @@
+repository:
+  name: backend-api
+  description: "FastAPI-based backend service for organization management"
+  private: false
+  topics: ["fastapi", "backend"]
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        contexts: ["ci/test", "ci/lint"]
+      enforce_admins: true
+      required_pull_request_reviews:
+        required_approving_review_count: 2
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+      restrictions:
+        users: []
+        teams: ["backend"]
