@@ -32,7 +32,7 @@ repository_defaults:
         contexts: []                             # List required status checks (add CI checks here!)
       enforce_admins: true                       # Enforce branch protection for admins
       required_pull_request_reviews:
-        required_approving_review_count: 2       # Require at least 1 review approval
+        required_approving_review_count: 3       # Require at least 1 review approval
         require_code_owner_reviews: true         # Require code owner review: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
         require_last_push_approval: true         # Require approval of most recent push
         require_conversation_resolution: true    # Require all code conversations to be resolved before merging
