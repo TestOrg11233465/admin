@@ -13,3 +13,4 @@ repository:
 repositories:
   devops-tools:
     has_issues: true
+    allow_rebase_merge: true
