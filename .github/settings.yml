@@ -1,6 +1,8 @@
-# Organization-wide repository defaults for Safe-Settings
-# https://github.com/probot/safe-settings
-# See also: https://docs.github.com/en/organizations/managing-organization-settings/repository-defaults-and-branch-protection
-
-
-# END OF FILE
+repository:
+  allow_merge_commit: true        # Only allow merge commits
+  allow_squash_merge: false       # Disallow squash
+  allow_rebase_merge: false       # Disallow rebase
+  allow_update_branch: true       # Always suggest updating PR branches
+  allow_auto_merge: false         # Disable auto-merge
+  delete_branch_on_merge: true    # Enable auto-deletion of head branch after merge
+  # ...other supported options if needed
