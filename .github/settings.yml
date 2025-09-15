@@ -2,5 +2,8 @@
 # https://github.com/probot/safe-settings
 # See also: https://docs.github.com/en/organizations/managing-organization-settings/repository-defaults-and-branch-protection
 
-
+repository:
+  allow_merge_commit: true
+  allow_squash_merge: false
+  allow_rebase_merge: false
 # END OF FILE
