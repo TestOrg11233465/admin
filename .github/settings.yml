@@ -1,6 +1,6 @@
 repository:
   allow_merge_commit: true
-  allow_squash_merge: true    # must be true to set squash_merge_commit_* options!
+  allow_squash_merge: false    # must be true to set squash_merge_commit_* options!
   allow_rebase_merge: false
   allow_update_branch: true
   allow_auto_merge: false
@@ -9,7 +9,10 @@ repository:
   has_projects: false         # disables Projects section
 
   # Advanced merge commit controls (ONLY if allow_squash_merge is true!)
-  squash_merge_commit_title: PR_TITLE
-  squash_merge_commit_message: PR_BODY
   merge_commit_title: PR_TITLE
   merge_commit_message: PR_BODY
+
+
+repositories:
+  devops-tools:
+    has_issues: true      # Only enable issues for this repo
