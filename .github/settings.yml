@@ -1,9 +1,24 @@
-# Organization-wide repository defaults for Safe-Settings
-# https://github.com/probot/safe-settings
-# See also: https://docs.github.com/en/organizations/managing-organization-settings/repository-defaults-and-branch-protection
-
-repository:
+repository_defaults:
+  # Only allow merge commits, disallow squash and rebase
   allow_merge_commit: true
   allow_squash_merge: false
   allow_rebase_merge: false
-# END OF FILE
+
+  # Set default commit message for merges to PR title and description
+  merge_commit_message: "PR_TITLE_AND_DESCRIPTION"
+
+  # Always suggest updating pull request branches
+  allow_update_branch: true
+
+  # Disable auto-merge
+  allow_auto_merge: false
+
+  # Enable automatic deletion of head branches after merging PR
+  delete_branch_on_merge: true
+
+  # Disable including Git LFS objects in archives
+  include_git_lfs_in_archives: false
+
+  # (Preview features not set for safety as requested)
+  # Limit branches/tags per push: not included
+  # Auto-close issues with merged PRs: not included
