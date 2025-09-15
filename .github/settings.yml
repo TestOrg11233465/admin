@@ -5,4 +5,5 @@ repository:
   allow_update_branch: true       # Always suggest updating PR branches
   allow_auto_merge: false         # Disable auto-merge
   delete_branch_on_merge: true    # Enable auto-deletion of head branch after merge
+  delete_branch_on_merge: true    # Enable auto-deletion of head branch after merge
   # ...other supported options if needed
