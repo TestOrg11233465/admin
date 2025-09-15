@@ -13,6 +13,6 @@ repository:
   merge_commit_message: PR_BODY
 
 
-# repositories:
-#   devops-tools:
-#     has_issues: true      # Only enable issues for this repo
+repositories:
+  devops-tools:
+    has_issues: true      # Only enable issues for this repo
