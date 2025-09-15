@@ -1,24 +1,8 @@
-repository_defaults:
-  # Only allow merge commits, disallow squash and rebase
-  allow_merge_commit: true
-  allow_squash_merge: false
-  allow_rebase_merge: false
-
-  # Set default commit message for merges to PR title and description
-  merge_commit_message: "PR_TITLE_AND_DESCRIPTION"
-
-  # Always suggest updating pull request branches
-  allow_update_branch: true
-
-  # Disable auto-merge
-  allow_auto_merge: false
-
-  # Enable automatic deletion of head branches after merging PR
-  delete_branch_on_merge: true
-
-  # Disable including Git LFS objects in archives
-  include_git_lfs_in_archives: false
-
-  # (Preview features not set for safety as requested)
-  # Limit branches/tags per push: not included
-  # Auto-close issues with merged PRs: not included
+repository:
+  allow_merge_commit: true        # Only allow merge commits
+  allow_squash_merge: false       # Disallow squash
+  allow_rebase_merge: false       # Disallow rebase
+  allow_update_branch: true       # Always suggest updating PR branches
+  allow_auto_merge: false         # Disable auto-merge
+  delete_branch_on_merge: true    # Enable auto-deletion of head branch after merge
+  # ...other supported options if needed
