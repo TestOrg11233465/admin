@@ -9,8 +9,3 @@ repository:
   has_projects: false
   merge_commit_title: PR_TITLE
   merge_commit_message: PR_BODY
-
-repositories:
-  devops-tools:
-    has_issues: true
-    allow_rebase_merge: true
