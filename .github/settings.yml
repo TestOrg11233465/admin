@@ -1,8 +1,15 @@
 repository:
-  allow_merge_commit: true        # Only allow merge commits
-  allow_squash_merge: false       # Disallow squash
-  allow_rebase_merge: false       # Disallow rebase
-  allow_update_branch: true       # Always suggest updating PR branches
-  allow_auto_merge: false         # Disable auto-merge
-  delete_branch_on_merge: true    # Enable auto-deletion of head branch after merge
-  # ...other supported options if needed
+  allow_merge_commit: true         # Only allow merge commits
+  allow_squash_merge: false        # Disallow squash
+  allow_rebase_merge: false        # Disallow rebase
+  allow_update_branch: true        # Always suggest updating PR branches
+  allow_auto_merge: false          # Disable auto-merge
+  delete_branch_on_merge: true     # Enable auto-deletion of head branch after merge
+
+  # Commit message/title strategy for merges
+  merge_commit_title: PR_TITLE         # Use PR title for merge commit title
+  merge_commit_message: PR_BODY        # Use PR body for merge commit message
+
+  # Commit message/title strategy for squash merges (if enabled in future)
+  squash_merge_commit_title: PR_TITLE      # Use PR title for squash merge commit title
+  squash_merge_commit_message: PR_BODY     # Use PR body for squash merge commit message
