@@ -9,3 +9,97 @@ repository:
   has_projects: false
   merge_commit_title: PR_TITLE
   merge_commit_message: PR_BODY
+
+rulesets:
+  - name: main
+    target: branch
+    enforcement: active
+    bypass_actors:
+      - type: repository_role
+        repository_role: admin             # Default admins can bypass
+    conditions:
+      ref_name:
+        include:
+          - 'main'
+        default_branch_only: true          # Applies only to default branch
+    rules:
+      # Restrict creations (DISABLED)
+      restrict_creation:
+        enabled: false
+
+      # Restrict updates (DISABLED)
+      restrict_update:
+        enabled: false
+
+      # Restrict deletions (ENABLED)
+      restrict_deletion:
+        enabled: true
+
+      # Require linear history (DISABLED)
+      require_linear_history:
+        enabled: false
+
+      # Require merge queue (DISABLED)
+      require_merge_queue:
+        enabled: false
+
+      # Require deployments to succeed (DISABLED)
+      require_deployments:
+        enabled: false
+        environments: []
+
+      # Require signed commits (DISABLED)
+      require_signed_commits:
+        enabled: false
+
+      # Require pull request before merging (ENABLED)
+      require_pull_request:
+        enabled: true
+        required_approvals: 1
+
+      # Dismiss stale PR approvals (DISABLED)
+      dismiss_stale_reviews:
+        enabled: false
+
+      # Require review from Code Owners (ENABLED)
+      require_code_owner_review:
+        enabled: true
+
+      # Require approval of the most recent reviewable push (ENABLED)
+      require_last_push_approval:
+        enabled: true
+
+      # Require conversation resolution before merging (ENABLED)
+      require_conversation_resolution:
+        enabled: true
+
+      # Automatically request Copilot code review (DISABLED)
+      require_copilot_code_review:
+        enabled: false
+
+      # Allowed merge methods
+      allow_merge_commit: true
+      allow_squash_merge: false
+      allow_rebase_merge: false
+
+      # Require status checks to pass (ENABLED, but no specific checks named)
+      require_status_checks:
+        enabled: true
+        contexts: []    # Add CI check names here if needed
+
+      # Block force pushes (ENABLED)
+      block_force_pushes:
+        enabled: true
+
+      # Require code scanning results (DISABLED)
+      require_code_scanning:
+        enabled: false
+        tools: []
+
+      # Restrict commit metadata (DISABLED)
+      restrict_commit_metadata:
+        enabled: false
+
+      # Restrict branch names (DISABLED)
+      restrict_branch_names:
+        enabled: false
