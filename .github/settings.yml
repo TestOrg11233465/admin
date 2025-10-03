@@ -41,7 +41,7 @@ rulesets:
 
       # Require merge queue (DISABLED)
       require_merge_queue:
-        enabled: false
+        enabled: true
 
       # Require deployments to succeed (DISABLED)
       require_deployments:
