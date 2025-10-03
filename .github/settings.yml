@@ -41,7 +41,7 @@ rulesets:
 
       # Require merge queue (DISABLED)
       require_merge_queue:
-        enabled: true
+        enabled: false
 
       # Require deployments to succeed (DISABLED)
       require_deployments:
@@ -79,7 +79,7 @@ rulesets:
 
       # Allowed merge methods
       allow_merge_commit: true
-      allow_squash_merge: false
+      allow_squash_merge: true
       allow_rebase_merge: false
 
       # Require status checks to pass (ENABLED, but no specific checks named)
